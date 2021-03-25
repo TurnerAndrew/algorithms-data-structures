@@ -7,6 +7,35 @@
 
 // Write a function called same that accepts two arrays.  The function should return true if every value in the array has it's corresponding value squared in the second array.  The frequency of values must be the same  
 
+// Understand the problem 
+    // Does the second array contain the same values as the first but squared 
+    // Can be in any order 
+// Concrete examples 
+    same([1, 2, 3], [4, 1, 9]) = true
+    same([1, 2, 3], [1, 9]) = false
+    same([1, 2, 1], [4, 4, 1]) = false
+// Break it down 
+    // Check if arrays are the same length, if not return false 
+    // Create a new array that contains the values of the first array squared 
+    // Compare second array to new array
+//Solve or Simplify
+    function same(arr1, arr2) {
+      if (arr1.length !== arr2.length) {
+        return false}
+        //if arrays aren't the same length return false
+      for (let i = 0; i < arr2.length; i++) {
+          //loop over arr1
+        let correctIndex = arr2.indexOf(arr1[i] ** 2)
+        //searches arr2 for the index equal to the square of the number at arr[i]
+        if (correctIndex === -1) {
+          return false
+          //if the index isn't found, returns false
+        }
+        arr2.splice(correctIndex, 1)
+        //if correctIndex is found, takes it out of the array and starts again
+      } return true
+    }
+
 function same(arr1, arr2) {
     if (arr1.length !== arr2.length) {
         return false
