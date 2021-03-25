@@ -56,3 +56,53 @@ function sumZero(arr) {
         }
     }   
 }
+
+//Implement a function called countUniqueValues that accepts a sorted array and counts the unique values in the array.  May contain negative numbers but the array will always be sorted
+
+    //count the number of different digits in an array
+    //[1, 1, ,1, 1, 1, 1, 2] = 2
+    //[1, 2, 3, 4, 4, 4, 4, 7, 7, 12, 12, 13] = 7
+    //[-2, -1, -1, 0, 1] = 4
+
+    //set a counter to 0
+    //set pointer1 at index 0
+    //set pointer2 at index 1
+    //compare pointer 1 and pointer 2
+    //if pointer 1 = pointer 2, move both right one
+    //if pointer 1 != pointer 2, increment counter, move both right one
+
+function countUniqueValues(arr) {
+    let counter = 0
+    let first = 0
+    let second = 1
+    while (first < arr.length) {
+        if(arr[first] === arr[second]) {
+            first ++
+            second ++
+        }
+        console.log(arr[first], arr[second])
+        if(arr[first] !== arr[second]) {
+            counter ++
+            first ++
+            second ++
+        }
+    }
+    return counter
+} 
+
+function countUniqueValues(arr) {
+    let i = 0
+    for(let j = 1; j < arr.length; j++) {
+        //iterates the array once
+        if (arr[i] !== arr[j]){
+            //if arr[i] and arr[j] are equal aren't equal
+            i++
+            //increments i to check against j on the next iteration
+            arr[i] = arr[j]
+            //sets the value of arr[j] to arr[i]
+        }
+    }
+    return i + 1
+    //returns the index of i + 1 which is now equivalent to the last unique value
+}
+    
