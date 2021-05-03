@@ -1,7 +1,7 @@
 // Creating pointers or values that correspond to an index or position and move towards the beginning, end or middle based on a certain condition
 // Very efficient for solving problems with minimal space complexity
 
-//Write a function called sumZero that accepts a sorted array of integers.  The function should find the first pair where the sume is 0.    Return an array that includes both values that sum to zero or undefined if no pair exists.
+//Write a function called sumZero that accepts a sorted array of integers.  The function should find the first pair where the sum is 0.    Return an array that includes both values that sum to zero or undefined if no pair exists.
 
 //Understand the problem
     //We will receive an array of sorted integers
@@ -95,8 +95,8 @@ function countUniqueValues(arr) {
     for(let j = 1; j < arr.length; j++) {
         //iterates the array once
         if (arr[i] !== arr[j]){
-            //if arr[i] and arr[j] are equal aren't equal
             i++
+            //if arr[i] and arr[j] aren't equal
             //increments i to check against j on the next iteration
             arr[i] = arr[j]
             //sets the value of arr[j] to arr[i]
