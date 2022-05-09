@@ -7,15 +7,21 @@ https://visualgo.net/en/sorting
 
 Common sorting methods:
     Elementary Sorting Methods
-        Bubble Sort
-        Selection Sort
-        Insertion Sort
+        Typically O(n^2)
+        Don't scale well
+            Bubble Sort
+                largest items to the top
+            Selection Sort
+                smallest items to the bottom
+            Insertion Sort
+                places the current item in the correct spot
     Advanced Sorting Methods
-        Merge Sort
-        Quick Sort
-        Radix Sort
-        Heap Sort
-        Shell Sort
+        Much faster at scale
+        Typically run at O(n log n)
+            Merge Sort
+            Quick Sort
+            Radix Sort
+       
 
 JavaScript Array.sort()
     sorts strings well
