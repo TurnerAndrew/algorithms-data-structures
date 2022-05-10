@@ -9,7 +9,7 @@
     //merge the single arrays back into larger arrays until you have the original array sorted
 
 
-//Merge Function
+//Merge Helper Function
     //Given two sorted arrays, create a new array that is also sorted and contains all items of both arrays
     //Should run in O(n + m)
         //Each item in each array should only be iterated once
